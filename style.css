@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* (main BG) */
+  --clr-dark-blue: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --clr-medium-blue: hsl(216, 50%, 16%);
+  /* (line) */
+  --clr-light-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --font-primary: "Outfit", sans-serif;
+}
+
+*,
+*::before,
+*::after,
+main,
+body,
+div,
+img,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-dark-blue);
+  overflow: hidden;
+}
+
+.card-container {
+  background-color: var(--clr-medium-blue);
+  margin: 0 auto;
+  padding: 25px;
+  width: 350px;
+  border-radius: 8px;
+}
+
+.overlay-container {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.equilibrium {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease;
+  background-color: var(--cyan);
+  border-radius: 8px;
+}
+
+.overlay-container:hover .overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.icon-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+h2 {
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+p {
+  font-size: 18px;
+  color: var(--color-primary);
+  font-weight: 300;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.price-time-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-time-container p,
+.creator {
+  font-size: 16px;
+  margin: 15px 0;
+  line-height: 2;
+}
+
+.price {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.price::before {
+  content: url("images/icon-ethereum.svg");
+  padding-right: 7px;
+  line-height: 19px;
+  vertical-align: middle;
+}
+
+.time::before {
+  content: url("images/icon-clock.svg");
+  padding-right: 7px;
+  line-height: 17px;
+  vertical-align: middle;
+}
+
+.creator-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.division {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid var(--clr-dark-blue);
+}
+
+.creator-container img {
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-white);
+  margin-right: 15px;
+}
+
+.creator {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.creator span {
+  color: var(--color-white);
+}
+
+.on-hover:hover {
+  color: var(--cyan);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.on-hover {
+  color: var(--white);
+}
